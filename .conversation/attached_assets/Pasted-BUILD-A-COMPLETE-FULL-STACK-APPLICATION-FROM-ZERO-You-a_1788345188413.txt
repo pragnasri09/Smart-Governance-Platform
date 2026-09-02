@@ -1,0 +1,1905 @@
+BUILD A COMPLETE FULL-STACK APPLICATION FROM ZERO.
+
+You are my senior full-stack software engineer, software architect, UI/UX designer, database designer, security engineer, QA tester, and debugging engineer.
+
+I am a B.Tech Artificial Intelligence and Machine Learning student building my final academic project.
+
+I need a REAL, WORKING, END-TO-END APPLICATION that I can demonstrate during my final project review, push to GitHub, share with my teammates, and deploy.
+
+IMPORTANT:
+I am attaching a reference image showing the desired application flow and dashboard concept.
+
+Use the attached image as the main UI/UX and workflow reference.
+
+DO NOT copy it exactly.
+Create a more polished, realistic and professional version of the same concept.
+
+============================================================
+PROJECT TITLE
+============================================================
+
+SMART GOVERNANCE PLATFORM
+
+Full project title:
+
+"Smart Governance Platform for Administrative Operations with Citizen Service Assistance"
+
+Short name:
+
+SGP
+
+============================================================
+VERY IMPORTANT — BUILD EVERYTHING FROM ZERO
+============================================================
+
+Create a completely new project.
+
+Do NOT assume that I have existing source code.
+
+Do NOT reuse old project files.
+
+Do NOT create a mockup-only website.
+
+Do NOT create fake frontend screens with no backend.
+
+Do NOT create placeholder buttons that do nothing.
+
+Do NOT create dead routes.
+
+Do NOT create fake authentication.
+
+Do NOT hardcode dashboard statistics when those statistics should come from the database.
+
+The final application must be functional from frontend to backend to database.
+
+============================================================
+PRIMARY GOAL
+============================================================
+
+Build this complete flow:
+
+PUBLIC WEBSITE
+        ↓
+HOME
+        ↓
+ABOUT / CONTACT
+        ↓
+LOGIN
+        ↓
+SELECT ROLE
+        ↓
+CITIZEN / STAFF / ADMIN
+        ↓
+AUTHENTICATION
+        ↓
+ROLE-BASED DASHBOARD
+        ↓
+FEATURES
+        ↓
+REST API
+        ↓
+SPRING BOOT BACKEND
+        ↓
+MYSQL DATABASE
+
+All major features must work.
+
+============================================================
+TECHNOLOGY STACK
+============================================================
+
+Use the following stack.
+
+FRONTEND:
+
+- React
+- Vite
+- JavaScript
+- React Router
+- Axios
+- CSS
+- Recharts for charts if required
+
+BACKEND:
+
+- Java
+- Spring Boot
+- Spring Web
+- Spring Data JPA
+- Spring Security
+- JWT authentication
+- Bean Validation
+
+DATABASE:
+
+- MySQL
+
+IMPORTANT:
+
+Keep the implementation simple and understandable.
+
+Do NOT introduce unnecessary technologies.
+
+Do NOT use microservices.
+
+Do NOT use Docker unless absolutely necessary.
+
+Do NOT use complicated design patterns that are unnecessary for this academic project.
+
+Use a clean monolithic Spring Boot backend.
+
+The architecture should be easy for a B.Tech student to explain.
+
+============================================================
+ARCHITECTURE
+============================================================
+
+Use this architecture:
+
+React Frontend
+      ↓
+Axios REST API calls
+      ↓
+Spring Boot REST Controllers
+      ↓
+Service Layer
+      ↓
+Repository Layer
+      ↓
+JPA / Hibernate
+      ↓
+MySQL
+
+Authentication:
+
+React Login
+      ↓
+Spring Security
+      ↓
+JWT
+      ↓
+Role-based authorization
+
+Roles:
+
+CITIZEN
+STAFF
+ADMIN
+
+============================================================
+IMPORTANT REPLIT REQUIREMENT
+============================================================
+
+Create the actual project files in the Replit workspace.
+
+Do not only explain code to me.
+
+Actually create:
+
+- folders
+- files
+- source code
+- configuration
+- database configuration
+- frontend
+- backend
+- README
+- .gitignore
+
+Run the application.
+
+Check for errors.
+
+Fix compilation errors.
+
+Fix runtime errors.
+
+Fix frontend errors.
+
+Fix backend errors.
+
+Fix API communication errors.
+
+Do not stop after generating the code.
+
+The goal is a RUNNING APPLICATION.
+
+============================================================
+PROJECT STRUCTURE
+============================================================
+
+Create a clean structure similar to:
+
+Smart-Governance-Platform/
+│
+├── Front-End/
+│   └── smart-governance-frontend/
+│       ├── public/
+│       ├── src/
+│       │   ├── components/
+│       │   ├── pages/
+│       │   ├── services/
+│       │   ├── context/
+│       │   ├── routes/
+│       │   ├── assets/
+│       │   ├── App.jsx
+│       │   ├── main.jsx
+│       │   └── index.css
+│       ├── package.json
+│       └── vite.config.js
+│
+├── Back-End/
+│   └── smart-governance-backend/
+│       ├── src/
+│       │   └── main/
+│       │       ├── java/
+│       │       │   └── com/
+│       │       │       └── sgp/
+│       │       │           ├── controller/
+│       │       │           ├── service/
+│       │       │           ├── repository/
+│       │       │           ├── entity/
+│       │       │           ├── dto/
+│       │       │           ├── security/
+│       │       │           ├── config/
+│       │       │           └── exception/
+│       │       └── resources/
+│       │           └── application.properties
+│       └── pom.xml
+│
+├── README.md
+└── .gitignore
+
+You may improve this structure slightly if necessary, but keep it simple.
+
+============================================================
+UI/UX — EXTREMELY IMPORTANT
+============================================================
+
+The website must look like a REAL GOVERNMENT SERVICE PLATFORM.
+
+It must NOT look AI-generated.
+
+It must NOT look like a generic SaaS dashboard.
+
+It must NOT look like a template copied from an AI UI generator.
+
+Avoid:
+
+- excessive gradients
+- neon colors
+- glowing cards
+- excessive rounded corners
+- excessive shadows
+- huge icons
+- excessive animations
+- glassmorphism everywhere
+- bright blue everywhere
+- bright green everywhere
+- purple/pink AI-style gradients
+- oversized text
+- unnecessary decorative elements
+
+The UI should be:
+
+- professional
+- clean
+- trustworthy
+- modern
+- minimal
+- structured
+- accessible
+- realistic
+- responsive
+
+Think of a real digital government service portal.
+
+============================================================
+COLOR THEME
+============================================================
+
+IMPORTANT:
+
+DO NOT use blue or green as the primary website theme.
+
+Use a sophisticated neutral government/corporate palette.
+
+Suggested palette:
+
+Background:
+warm white / off-white
+
+Primary text:
+charcoal / deep slate
+
+Primary accent:
+muted plum / burgundy / deep terracotta
+
+Secondary accent:
+warm beige / muted slate
+
+Borders:
+soft neutral gray
+
+Status colors:
+Use small and controlled status colors only.
+
+For example:
+
+Pending → subtle amber
+In Progress → muted blue/slate
+Resolved → subtle green
+Rejected → muted red
+
+The overall application should NOT become colorful.
+
+Use color primarily for hierarchy, status and interaction.
+
+============================================================
+TYPOGRAPHY
+============================================================
+
+Use a professional modern sans-serif font.
+
+Examples:
+
+Inter
+Manrope
+Source Sans 3
+
+Choose one and use it consistently.
+
+Ensure:
+
+- readable font sizes
+- proper line height
+- clear headings
+- clear labels
+- accessible contrast
+
+============================================================
+PUBLIC WEBSITE
+============================================================
+
+Create a professional public website before login.
+
+Navbar:
+
+SGP logo
+
+Home
+About
+Contact
+
+Login button on the right.
+
+The navbar should be clean and responsive.
+
+------------------------------------------------------------
+HOME PAGE
+------------------------------------------------------------
+
+Hero section:
+
+SMART GOVERNANCE PLATFORM
+
+Description:
+
+"A digital platform that connects citizens with government departments, simplifies complaint management, improves transparency, and helps departments deliver services efficiently."
+
+Buttons:
+
+Get Started
+Learn More
+
+Include a professional civic/government illustration.
+
+The illustration should be subtle.
+
+Do NOT use a cheesy AI-generated-looking hero.
+
+Below the hero:
+
+FEATURES
+
+Citizen Friendly
+Transparent
+Efficient
+Timely Updates
+
+Then:
+
+HOW IT WORKS
+
+1. Submit Complaint
+2. Department Assignment
+3. Complaint Processing
+4. Resolution
+
+Then a short section explaining the platform.
+
+Then footer.
+
+------------------------------------------------------------
+ABOUT PAGE
+------------------------------------------------------------
+
+Create a proper About page.
+
+Sections:
+
+About SGP
+
+Why the platform is needed
+
+What problems it solves
+
+Benefits for citizens
+
+Benefits for government staff
+
+Benefits for administrators
+
+Platform objectives
+
+Keep it concise and professional.
+
+------------------------------------------------------------
+CONTACT PAGE
+------------------------------------------------------------
+
+Create:
+
+Name
+Email
+Subject
+Message
+Submit button
+
+Validate the fields.
+
+Display a proper success/error message.
+
+============================================================
+LOGIN FLOW
+============================================================
+
+Clicking LOGIN should take the user to:
+
+SELECT YOUR ROLE
+
+Show three professional role cards:
+
+1. Citizen
+2. Staff
+3. Admin
+
+Each card should explain the role.
+
+Citizen:
+"Register complaints and track service requests."
+
+Staff:
+"View assigned complaints and manage resolutions."
+
+Admin:
+"Manage users, departments and overall operations."
+
+Citizen:
+Login / Signup
+
+Staff:
+Login / Signup
+
+Admin:
+Login ONLY
+
+IMPORTANT:
+
+DO NOT create public Admin Signup.
+
+Admin accounts must be created securely through database seed/setup.
+
+============================================================
+CITIZEN MODULE
+============================================================
+
+CITIZEN SIGNUP:
+
+Fields:
+
+Full Name
+Email
+Password
+Confirm Password
+
+Validation:
+
+- required fields
+- valid Gmail format such as example@gmail.com
+- password minimum length
+- matching passwords
+- duplicate email handling
+
+CITIZEN LOGIN:
+
+Email
+Password
+
+On successful authentication:
+
+redirect to:
+
+/citizen/dashboard
+
+------------------------------------------------------------
+CITIZEN DASHBOARD
+------------------------------------------------------------
+
+Create a professional dashboard.
+
+Sidebar:
+
+Dashboard
+Submit Complaint
+My Complaints
+Track Complaint
+Notifications
+Profile
+Logout
+
+Dashboard statistics:
+
+Total Complaints
+Pending
+In Progress
+Resolved
+
+IMPORTANT:
+
+These numbers should come from backend/database APIs.
+
+Do not permanently hardcode them.
+
+Quick actions:
+
+Submit Complaint
+My Complaints
+Track Complaint
+Notifications
+
+------------------------------------------------------------
+SUBMIT COMPLAINT
+------------------------------------------------------------
+
+Fields:
+
+Complaint Title
+Category
+Department
+Description
+Location
+
+Optional attachment can be implemented only if it does not significantly increase complexity.
+
+When submitted:
+
+- validate form
+- call backend API
+- save complaint in MySQL
+- generate complaint ID
+- set initial status to PENDING
+- show success message
+- clear form or navigate to complaint details
+
+------------------------------------------------------------
+MY COMPLAINTS
+------------------------------------------------------------
+
+Display only complaints belonging to the logged-in citizen.
+
+Table:
+
+Complaint ID
+Title
+Department
+Date
+Status
+Action
+
+Add:
+
+Search
+Filter by status
+
+Action:
+
+View
+
+------------------------------------------------------------
+TRACK COMPLAINT
+------------------------------------------------------------
+
+Create a clean complaint tracking page.
+
+Show:
+
+Complaint Submitted
+        ↓
+Assigned
+        ↓
+In Progress
+        ↓
+Resolved
+
+Highlight the current status.
+
+Also display:
+
+Complaint ID
+Title
+Department
+Submitted date
+Current status
+Remarks
+Resolution if available
+
+------------------------------------------------------------
+CITIZEN NOTIFICATIONS
+------------------------------------------------------------
+
+Display notifications such as:
+
+Complaint submitted successfully
+Complaint assigned to department
+Complaint status changed
+Complaint resolved
+
+============================================================
+STAFF MODULE
+============================================================
+
+STAFF SIGNUP:
+
+Fields:
+
+Full Name
+Email
+Password
+Confirm Password
+Department
+
+STAFF LOGIN:
+
+Email
+Password
+
+Successful login:
+
+→ Staff Dashboard
+
+------------------------------------------------------------
+STAFF DASHBOARD
+------------------------------------------------------------
+
+Sidebar:
+
+Dashboard
+Assigned Complaints
+All Complaints
+Update Status
+Remarks / Resolution
+Notifications
+Profile
+Logout
+
+Statistics:
+
+Assigned
+In Progress
+Resolved
+Overdue
+
+------------------------------------------------------------
+ASSIGNED COMPLAINTS
+------------------------------------------------------------
+
+Table:
+
+Complaint ID
+Complaint Title
+Citizen Name
+Department
+Status
+Date
+Action
+
+Staff can open a complaint.
+
+------------------------------------------------------------
+COMPLAINT DETAILS
+------------------------------------------------------------
+
+Show:
+
+Complaint ID
+Title
+Citizen
+Category
+Department
+Description
+Location
+Created date
+Current status
+Remarks
+Resolution
+
+Staff can:
+
+Update status
+Add remarks
+Add resolution
+
+Allowed statuses:
+
+PENDING
+ASSIGNED
+IN_PROGRESS
+RESOLVED
+REJECTED
+
+============================================================
+ADMIN MODULE
+============================================================
+
+ADMIN LOGIN ONLY.
+
+Do not provide admin registration.
+
+Seed/create an admin account in a safe setup method.
+
+------------------------------------------------------------
+ADMIN DASHBOARD
+------------------------------------------------------------
+
+Sidebar:
+
+Dashboard
+Users
+Departments
+All Complaints
+Staff Management
+Reports & Statistics
+Notifications
+Profile
+Logout
+
+Dashboard statistics:
+
+Total Users
+Total Complaints
+Resolved Complaints
+Departments
+
+------------------------------------------------------------
+USERS
+------------------------------------------------------------
+
+Admin can:
+
+View users
+Search users
+Filter by role
+View user details
+
+Roles:
+
+Citizen
+Staff
+Admin
+
+------------------------------------------------------------
+DEPARTMENTS
+------------------------------------------------------------
+
+Admin can:
+
+View departments
+Add department
+Edit department
+Deactivate/delete department
+
+Initial departments:
+
+Public Works
+Water Supply
+Electricity
+Sanitation
+Roads
+Health
+
+These should be stored in MySQL.
+
+------------------------------------------------------------
+COMPLAINT MANAGEMENT
+------------------------------------------------------------
+
+Admin can:
+
+View all complaints
+Search complaints
+Filter by status
+Filter by department
+View complaint details
+
+------------------------------------------------------------
+STAFF MANAGEMENT
+------------------------------------------------------------
+
+Admin can:
+
+View staff
+View department
+Manage staff information
+
+------------------------------------------------------------
+REPORTS
+------------------------------------------------------------
+
+Create a professional reports dashboard.
+
+Show:
+
+Total Complaints
+Pending
+Assigned
+In Progress
+Resolved
+Rejected
+
+Charts:
+
+Complaints by Status
+
+Complaints by Department
+
+Recent Complaints
+
+IMPORTANT:
+
+Charts should use real API/database data.
+
+============================================================
+DATABASE
+============================================================
+
+Use MySQL.
+
+Create database:
+
+smart_governance
+
+Use this database name consistently throughout the project.
+
+Entities:
+
+User
+Department
+Complaint
+Notification
+
+------------------------------------------------------------
+USER
+------------------------------------------------------------
+
+Fields:
+
+id
+name
+email
+password
+role
+department
+createdAt
+
+Email must be unique.
+
+Password must be hashed.
+
+------------------------------------------------------------
+DEPARTMENT
+------------------------------------------------------------
+
+Fields:
+
+id
+name
+description
+createdAt
+
+------------------------------------------------------------
+COMPLAINT
+------------------------------------------------------------
+
+Fields:
+
+id
+title
+description
+category
+location
+status
+citizen
+department
+assignedStaff
+remarks
+resolution
+createdAt
+updatedAt
+
+------------------------------------------------------------
+NOTIFICATION
+------------------------------------------------------------
+
+Fields:
+
+id
+message
+user
+complaint
+readStatus
+createdAt
+
+Create proper JPA relationships.
+
+Use:
+
+@OneToMany
+@ManyToOne
+
+where appropriate.
+
+Do not create unnecessary database tables.
+
+============================================================
+BACKEND ARCHITECTURE
+============================================================
+
+Use clean Spring Boot layers.
+
+controller
+service
+repository
+entity
+dto
+security
+config
+exception
+
+Example:
+
+AuthController
+UserController
+ComplaintController
+DepartmentController
+NotificationController
+
+Services:
+
+AuthService
+UserService
+ComplaintService
+DepartmentService
+NotificationService
+JwtService
+
+Repositories:
+
+UserRepository
+ComplaintRepository
+DepartmentRepository
+NotificationRepository
+
+============================================================
+DTOs
+============================================================
+
+Use DTOs where appropriate.
+
+Create:
+
+RegisterRequest
+LoginRequest
+LoginResponse
+ComplaintRequest
+ComplaintResponse
+StatusUpdateRequest
+DepartmentRequest
+UserResponse
+
+Do not unnecessarily expose database entities directly.
+
+Keep DTO design simple.
+
+============================================================
+AUTHENTICATION AND SECURITY
+============================================================
+
+Implement real authentication.
+
+Registration:
+
+POST /api/auth/register
+
+Login:
+
+POST /api/auth/login
+
+Use:
+
+Spring Security
+BCrypt password hashing
+JWT authentication
+
+JWT should contain:
+
+user identity
+role
+
+Backend must validate JWT for protected APIs.
+
+Implement role-based authorization.
+
+Roles:
+
+ROLE_CITIZEN
+ROLE_STAFF
+ROLE_ADMIN
+
+Examples:
+
+Citizen:
+- create complaints
+- view own complaints
+- track own complaints
+- view own notifications
+
+Staff:
+- view assigned complaints
+- update complaint status
+- add remarks
+- add resolution
+
+Admin:
+- view/manage users
+- manage departments
+- view/manage complaints
+- manage staff
+- reports
+
+A citizen MUST NOT be able to call admin APIs.
+
+A staff member MUST NOT be able to call admin-only APIs.
+
+Do not depend only on frontend route protection.
+
+============================================================
+REST APIs
+============================================================
+
+Create clean REST APIs.
+
+AUTH:
+
+POST /api/auth/register
+POST /api/auth/login
+
+USERS:
+
+GET /api/users
+GET /api/users/profile
+
+DEPARTMENTS:
+
+GET /api/departments
+POST /api/departments
+PUT /api/departments/{id}
+DELETE /api/departments/{id}
+
+COMPLAINTS:
+
+POST /api/complaints
+GET /api/complaints/my
+GET /api/complaints/assigned
+GET /api/complaints
+GET /api/complaints/{id}
+PUT /api/complaints/{id}/status
+
+NOTIFICATIONS:
+
+GET /api/notifications
+
+Add other endpoints only when genuinely required.
+
+============================================================
+FRONTEND AUTHENTICATION
+============================================================
+
+Create:
+
+AuthContext
+
+ProtectedRoute
+
+Authentication service
+
+Axios API service.
+
+After login:
+
+Store the authentication state appropriately.
+
+Attach JWT to protected API requests.
+
+Protect routes based on role.
+
+Example:
+
+/citizen/*
+/staff/*
+/admin/*
+
+Users should not access another role's dashboard.
+
+Logout should clear authentication state and redirect to login/home.
+
+============================================================
+ERROR HANDLING
+============================================================
+
+Handle:
+
+400 Bad Request
+401 Unauthorized
+403 Forbidden
+404 Not Found
+500 Internal Server Error
+
+Frontend should display clean user-friendly error messages.
+
+Never show:
+blank page
+undefined
+raw stack trace
+unhandled promise rejection
+
+Backend should have appropriate exception handling.
+
+============================================================
+VALIDATION
+============================================================
+
+Validate frontend AND backend.
+
+Examples:
+
+Required fields
+Email format
+Password length
+Duplicate email
+Complaint title
+Complaint description
+Department selection
+
+Do not rely only on frontend validation.
+
+============================================================
+RESPONSIVE DESIGN
+============================================================
+
+The application must work on:
+
+Desktop
+Laptop
+Tablet
+Mobile
+
+Dashboard sidebar should become responsive.
+
+Tables should remain usable on small screens.
+
+Forms should be responsive.
+
+============================================================
+ACCESSIBILITY
+============================================================
+
+Use:
+
+Proper labels
+Readable contrast
+Keyboard-friendly controls
+Clear buttons
+Meaningful error messages
+Accessible form inputs
+
+============================================================
+PERFORMANCE
+============================================================
+
+Keep the project lightweight.
+
+Avoid:
+
+Unnecessary packages
+Huge images
+Heavy animations
+Infinite API polling
+Duplicate requests
+Unnecessary re-renders
+
+Use reasonable React component structure.
+
+============================================================
+DEMO DATA
+============================================================
+
+Create a simple database seeding/setup mechanism.
+
+Create realistic demo data:
+
+1 Admin
+3 Staff
+5 Citizens
+6 Departments
+Several Complaints
+Several Notifications
+
+Use realistic names and complaint descriptions.
+
+Do not expose passwords in the application UI.
+
+Document demo credentials in README or a separate clearly marked development section.
+
+============================================================
+NO FAKE DATA AFTER INTEGRATION
+============================================================
+
+During initial UI development, mock data may be used temporarily if necessary.
+
+But once backend integration is complete:
+
+Replace mock data with actual API/database data.
+
+Final dashboards must use actual backend data.
+
+============================================================
+CORS
+============================================================
+
+Configure CORS correctly for local development.
+
+Frontend will communicate with Spring Boot backend.
+
+Make the configuration easy to change for production deployment.
+
+============================================================
+ENVIRONMENT VARIABLES
+============================================================
+
+Do NOT hardcode secrets.
+
+Do not commit:
+
+MySQL password
+JWT secret
+API keys
+
+Use environment variables/configuration.
+
+Create an example environment configuration if useful.
+
+============================================================
+ROUTES
+============================================================
+
+Public:
+
+/
+ /about
+ /contact
+
+Authentication:
+
+/login
+/login/citizen
+/signup/citizen
+/login/staff
+/signup/staff
+/login/admin
+
+Citizen:
+
+/citizen/dashboard
+/citizen/complaints
+/citizen/complaints/new
+/citizen/complaints/:id
+/citizen/notifications
+/citizen/profile
+
+Staff:
+
+/staff/dashboard
+/staff/complaints
+/staff/complaints/:id
+/staff/notifications
+/staff/profile
+
+Admin:
+
+/admin/dashboard
+/admin/users
+/admin/departments
+/admin/complaints
+/admin/staff
+/admin/reports
+/admin/notifications
+/admin/profile
+
+Every route must work.
+
+No broken navigation.
+
+No dead buttons.
+
+============================================================
+IMPORTANT UI BEHAVIOR
+============================================================
+
+Every important button must actually perform an action.
+
+Examples:
+
+Get Started → Login/Role Selection
+
+Login → Role Selection
+
+Submit Complaint → Submit Complaint page
+
+View Complaint → Complaint Details
+
+Update Status → API update
+
+Add Resolution → API update
+
+Logout → clear authentication and return to login/home
+
+Manage Departments → Department Management
+
+Reports → Reports page
+
+Do not create buttons only for visual appearance.
+
+============================================================
+LOADING STATES
+============================================================
+
+For API calls show:
+
+Loading...
+
+where appropriate.
+
+Disable submit buttons while submitting.
+
+Prevent accidental duplicate submissions.
+
+============================================================
+EMPTY STATES
+============================================================
+
+If there are no complaints/users/notifications:
+
+Show a clean message.
+
+Example:
+
+"No complaints found."
+
+Do not leave an empty white area.
+
+============================================================
+UI DETAILS
+============================================================
+
+Create reusable:
+
+Navbar
+Footer
+Sidebar
+Topbar
+StatCard
+StatusBadge
+ComplaintTable
+Modal
+Form components
+ProtectedRoute
+
+Use consistent spacing.
+
+Use subtle borders.
+
+Use restrained shadows.
+
+Use professional tables.
+
+Use clean forms.
+
+Use realistic dashboard layouts.
+
+============================================================
+HOME PAGE VISUAL STYLE
+============================================================
+
+The home page should communicate:
+
+Government
+Civic services
+Transparency
+Citizen support
+Administrative efficiency
+
+The attached reference image has:
+
+Public Website
+→ Login / Role Selection
+→ Authentication
+→ Citizen / Staff / Admin dashboards
+
+Keep this overall concept.
+
+Improve the visual design substantially.
+
+============================================================
+DASHBOARD VISUAL STYLE
+============================================================
+
+Citizen dashboard:
+
+Focus on:
+complaints
+tracking
+notifications
+quick actions
+
+Staff dashboard:
+
+Focus on:
+assigned complaints
+status
+resolution
+workload
+
+Admin dashboard:
+
+Focus on:
+users
+departments
+complaints
+reports
+system overview
+
+Do not make all three dashboards identical.
+
+Each role should have a distinct purpose.
+
+============================================================
+CODE QUALITY
+============================================================
+
+Code should be:
+
+Simple
+Readable
+Consistent
+Modular
+Maintainable
+
+Use meaningful variable names.
+
+Avoid unnecessarily clever code.
+
+Avoid huge components where possible.
+
+Use reusable components.
+
+Add comments only where they genuinely help understanding.
+
+Do not over-comment obvious code.
+======================
+TESTING
+============================================================
+
+After implementation, actually test the application.
+
+Test:
+
+1. Home page
+2. About page
+3. Contact page
+4. Login
+5. Role selection
+6. Citizen signup
+7. Citizen login
+8. Citizen dashboard
+9. Citizen complaint submission
+10. Citizen complaint list
+11. Citizen complaint tracking
+12. Citizen notifications
+13. Staff signup
+14. Staff login
+15. Staff dashboard
+16. Staff assigned complaints
+17. Staff status update
+18. Staff remarks/resolution
+19. Admin login
+20. Admin dashboard
+21. User management
+22. Department management
+23. Complaint management
+24. Staff management
+25. Reports
+26. Notifications
+27. Logout
+28. Unauthorized access
+29. Invalid login
+30. Duplicate registration
+
+Test frontend/backend communication.
+
+Test database persistence.
+
+Test role-based authorization.
+
+============================================================
+DEBUGGING REQUIREMENT
+============================================================
+
+If you encounter an error while building:
+
+DO NOT ignore it.
+
+Diagnose it.
+
+Fix it.
+
+Run the relevant command again.
+
+Continue only after the issue is resolved.
+
+Common things to verify:
+
+- imports
+- package names
+- dependencies
+- ports
+- API URLs
+- CORS
+- database connection
+- JWT configuration
+- entity relationships
+- React routes
+- Axios requests
+- authentication state
+- authorization
+- SQL schema
+
+============================================================
+DATABASE REQUIREMENT
+============================================================
+
+The application must actually persist data in MySQL.
+
+For example:
+
+When a citizen submits a complaint:
+
+React
+ ↓
+POST /api/complaints
+ ↓
+Spring Controller
+ ↓
+Complaint Service
+ ↓
+Complaint Repository
+ ↓
+MySQL
+
+When staff updates the complaint:
+
+React
+ ↓
+PUT /api/complaints/{id}/status
+ ↓
+Spring Boot
+ ↓
+MySQL
+
+Then the citizen should see the updated status.
+
+This complete flow must work.
+
+============================================================
+FINAL PROJECT STRUCTURE
+============================================================
+
+The final project should contain:
+
+Front-End
+Back-End
+README
+.gitignore
+LICENSE
+
+Do not include:
+
+node_modules
+target
+temporary files
+IDE-specific files
+passwords
+secrets
+
+============================================================
+README
+============================================================
+
+Create a professional README containing:
+
+Project Title
+Project Description
+Problem Statement
+Objectives
+Features
+User Roles
+Technology Stack
+System Architecture
+Folder Structure
+Database Design
+API Overview
+Authentication
+Security
+Installation
+Running Frontend
+Running Backend
+MySQL Setup
+Demo Credentials
+Testing
+Deployment
+Future Enhancements
+Team Members
+
+============================================================
+GITHUB READY
+============================================================
+
+The project must be ready to push to GitHub.
+
+Make sure:
+
+.gitignore is correct.
+
+No secrets are committed.
+
+No generated build directories are unnecessarily committed.
+
+============================================================
+DEPLOYMENT
+============================================================
+
+After the application works locally, make it deployment-ready.
+
+Do not sacrifice the local working setup just to deploy.
+
+Keep configuration easy to change between:
+
+Development
+Production
+
+Document deployment requirements in README.
+
+============================================================
+ACADEMIC PROJECT REQUIREMENT
+============================================================
+
+This project is for a B.Tech academic final project.
+
+The implementation must be realistic but not unnecessarily complicated.
+
+I need to explain:
+
+Why React?
+Why Spring Boot?
+Why MySQL?
+Why REST APIs?
+Why JWT?
+Why Spring Security?
+Why BCrypt?
+Why JPA/Hibernate?
+Why Controller-Service-Repository architecture?
+Why role-based authorization?
+
+The architecture must be understandable to a student.
+
+============================================================
+IMPORTANT: DO NOT OVERENGINEER
+============================================================
+
+This is extremely important.
+
+Do NOT add:
+
+Microservices
+Kafka
+Redis
+Kubernetes
+GraphQL
+Complex event-driven architecture
+Complex cloud infrastructure
+AI/ML models unless required
+Unnecessary design patterns
+Unnecessary libraries
+
+The project should be:
+
+Simple
+Professional
+Functional
+Secure
+Explainable
+Fast
+
+============================================================
+DEVELOPMENT PRIORITY
+============================================================
+
+If you need to prioritize because of time, follow this order:
+
+1. Project setup
+2. Public website
+3. Authentication
+4. Role-based access
+5. Citizen complaints
+6. Staff complaint management
+7. Admin management
+8. Database integration
+9. Notifications
+10. Reports
+11. UI polish
+12. Testing
+13. GitHub
+14. Deployment
+
+Do not spend excessive time on visual animations before core functionality works.
+
+============================================================
+CRITICAL RULE — DO NOT STOP AT CODE GENERATION
+============================================================
+
+You are responsible for creating and testing the complete application.
+
+Do not just write files and stop.
+
+After creating the project:
+
+1. Install dependencies.
+2. Build frontend.
+3. Build backend.
+4. Start services.
+5. Check for compilation errors.
+6. Check database connection.
+7. Test API endpoints.
+8. Test frontend API calls.
+9. Test authentication.
+10. Test role authorization.
+11. Test complaint flow.
+12. Fix errors.
+13. Re-test.
+14. Ensure the final application runs.
+
+============================================================
+FINAL ACCEPTANCE CHECKLIST
+============================================================
+
+Do not consider the project complete until these are true:
+
+[ ] React frontend runs
+[ ] Spring Boot backend runs
+[ ] MySQL connection works
+[ ] Public home page works
+[ ] About page works
+[ ] Contact page works
+[ ] Login works
+[ ] Role selection works
+[ ] Citizen signup works
+[ ] Citizen login works
+[ ] Staff signup works
+[ ] Staff login works
+[ ] Admin login works
+[ ] JWT works
+[ ] BCrypt password hashing works
+[ ] Role-based authorization works
+[ ] Protected routes work
+[ ] Citizen dashboard works
+[ ] Citizen can submit complaints
+[ ] Citizen can view complaints
+[ ] Citizen can track complaints
+[ ] Citizen notifications work
+[ ] Staff dashboard works
+[ ] Staff can view assigned complaints
+[ ] Staff can update status
+[ ] Staff can add remarks
+[ ] Staff can add resolution
+[ ] Admin dashboard works
+[ ] Admin can manage users
+[ ] Admin can manage departments
+[ ] Admin can view complaints
+[ ] Admin can manage staff
+[ ] Admin reports work
+[ ] Database persistence works
+[ ] Frontend/backend integration works
+[ ] Validation works
+[ ] Error handling works
+[ ] No broken routes
+[ ] No dead buttons
+[ ] No blank pages
+[ ] No major console errors
+[ ] No backend compilation errors
+[ ] Responsive UI
+[ ] Professional UI
+[ ] GitHub ready
+[ ] Deployment ready
+
+============================================================
+FINAL OUTPUT
+============================================================
+
+When the project is complete, provide me with:
+
+1. Final folder structure
+2. How to run the project
+3. Frontend URL
+4. Backend URL
+5. Database setup instructions
+6. Demo credentials
+7. Main API endpoints
+8. Testing summary
+9. Known limitations, if any
+10. GitHub push instructions
+11. Deployment instructions
+
+============================================================
+START NOW
+============================================================
+
+DO NOT ask me to design individual pages first.
+
+DO NOT ask me to provide existing code.
+
+We are starting from ZERO.
+
+Analyze this complete specification and the attached reference image.
+
+Then create the complete project in the Replit workspace.
+
+Start by creating the project structure and implementing the foundation.
+
+Keep the implementation simple, readable and reliable.
+
+Most importantly:
+
+BUILD A REAL WORKING APPLICATION,
+NOT A UI MOCKUP.
+
+The final result should look like a professional government platform, not an AI-generated website.

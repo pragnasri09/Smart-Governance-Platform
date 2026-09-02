@@ -1,0 +1,1 @@
+- [OpenAPI route alignment](openapi-route-alignment.md) — when diagnosing an API 404, compare the generated client URL and method with the Express route before changing either side.
