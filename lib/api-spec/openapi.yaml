@@ -162,7 +162,6 @@ paths:
       operationId: listDepartments
       tags: [departments]
       summary: List active departments
-      security: [{ bearerAuth: [] }]
       responses:
         "200":
           description: Departments

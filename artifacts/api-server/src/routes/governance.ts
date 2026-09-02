@@ -227,7 +227,7 @@ router.get("/users", requireAuth, allowRoles("ADMIN"), async (req, res) => {
   res.json(result.rows.map(userDto));
 });
 
-router.get("/departments", requireAuth, async (_req, res) => {
+router.get("/departments", async (_req, res) => {
   const result = await pool.query("SELECT * FROM departments WHERE active = true ORDER BY name");
   res.json(result.rows.map(departmentDto));
 });
