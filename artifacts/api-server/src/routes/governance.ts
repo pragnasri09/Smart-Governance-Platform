@@ -324,15 +324,16 @@ router.get("/complaints/my", requireAuth, allowRoles("CITIZEN"), async (req, res
 router.get("/complaints/assigned", requireAuth, allowRoles("STAFF"), async (req, res) => {
   const parsed = ListAssignedComplaintsQueryParams.safeParse(req.query);
   const query = parsed.success ? parsed.data : {};
-  const filters = addComplaintFilters(query, 1);
+  const staff = await pool.query("SELECT department_id FROM users WHERE id = $1 AND role = 'STAFF'", [session(req).id]);
+  const filters = addComplaintFilters(query, 2);
   const complaints = await complaintQuery(
-    `AND c.assigned_staff_id = $1 ${filters.where}`,
-    [session(req).id, ...filters.params],
+    `AND (c.assigned_staff_id = $1 OR (c.assigned_staff_id IS NULL AND c.department_id = $2 AND c.status = 'PENDING')) ${filters.where}`,
+    [session(req).id, staff.rows[0]?.department_id ?? null, ...filters.params],
   );
   res.json(complaints);
 });
 
-router.get("/complaints", requireAuth, allowRoles("STAFF", "ADMIN"), async (req, res) => {
+router.get("/complaints", requireAuth, allowRoles("ADMIN"), async (req, res) => {
   const parsed = ListComplaintsQueryParams.safeParse(req.query);
   const query = parsed.success ? parsed.data : {};
   const filters = addComplaintFilters(query);
@@ -369,7 +370,7 @@ router.put("/complaints/:id", requireAuth, allowRoles("STAFF", "ADMIN"), async (
     res.status(404).json({ error: "Complaint not found." });
     return;
   }
-  if (current.role === "STAFF" && existing[0].assignedStaffId !== current.id) {
+  if (current.role === "STAFF" && existing[0].assignedStaffId !== null && existing[0].assignedStaffId !== current.id) {
     res.status(403).json({ error: "You can only update complaints assigned to you." });
     return;
   }

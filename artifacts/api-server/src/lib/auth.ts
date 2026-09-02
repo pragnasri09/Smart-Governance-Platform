@@ -4,8 +4,15 @@ import jwt from "jsonwebtoken";
 export type Role = "CITIZEN" | "STAFF" | "ADMIN";
 export type SessionUser = { id: number; role: Role; email: string; name: string };
 
-const secret: string =
-  process.env.SESSION_SECRET ?? "local-development-secret-change-me";
+const secret = process.env.SESSION_SECRET ?? "";
+
+if (!secret) {
+  throw new Error("SESSION_SECRET environment variable is required.");
+}
+
+function isRole(value: unknown): value is Role {
+  return value === "CITIZEN" || value === "STAFF" || value === "ADMIN";
+}
 
 export function createToken(user: SessionUser) {
   return jwt.sign(
@@ -26,13 +33,14 @@ export function requireAuth(req: Request, res: Response, next: NextFunction) {
 
   try {
     const payload = jwt.verify(token, secret) as jwt.JwtPayload;
-    if (!payload.sub || !payload.role) {
+    const id = Number(payload.sub);
+    if (!Number.isInteger(id) || id <= 0 || !isRole(payload.role)) {
       res.status(401).json({ error: "Your session is invalid. Please sign in again." });
       return;
     }
     (req as Request & { user: SessionUser }).user = {
-      id: Number(payload.sub),
-      role: payload.role as Role,
+      id,
+      role: payload.role,
       email: String(payload.email ?? ""),
       name: String(payload.name ?? ""),
     };
